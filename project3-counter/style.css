@@ -1,0 +1,17 @@
+#countLabel {
+  display: block;
+  text-align: center;
+  font-size: 10em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.buttons {
+background-color: rgb(224, 194, 46);
+  padding: auto;
+  font-size: large;
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgb(238, 9, 9);
+}
+#btnContainer {
+  text-align: center;
+}
