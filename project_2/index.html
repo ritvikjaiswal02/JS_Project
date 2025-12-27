@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Changer</title>
+    <style>
+      body {
+        background-color: black;
+        color: aliceblue;
+        text-align: center;
+      }
+      .imagecontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .imagecontainer img {
+        height: 300px;
+        border: 20px solid blue;
+      }
+      .imagecontainer h2 {
+        background-color: yellow;
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Changer</h1>
+    <div class="imagecontainer">
+      <img
+        <img
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+        alt="London"
+      />
+
+      <h2>London</h2>
+    </div>
+    <script>
+      let img = document.querySelector("img");
+      let h2 = document.querySelector("h2");
+      let prevSrc = img.src;
+      let prevText = h2.innerText;
+
+      img.addEventListener("mouseover", () => {
+        img.src =
+          "https://cdn.pixabay.com/photo/2021/06/22/16/39/arch-6356637_1280.jpg";
+        h2.innerText = "Paris";
+        img.style.border = "2px solid yellow";
+      });
+
+      img.addEventListener("mouseleave", () => {
+        img.src = prevSrc;
+        h2.innerText = prevText;
+        img.style.border = "2px solid blue";
+      });
+    </script>
+  </body>
+</html>
